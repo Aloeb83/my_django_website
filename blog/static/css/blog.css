@@ -31,3 +31,11 @@ h1, h2, h3, h4 {
     color: #000000;
     text-decoration: none;
 }
+
+.post-form-blog textarea {
+    width: 100%;
+}
+
+.post-form-blog .btn-primary {
+    float: right;
+}
