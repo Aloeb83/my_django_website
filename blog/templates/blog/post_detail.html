@@ -6,10 +6,13 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
+
+            {% else %}
+            <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-primary">Publish</a>
         {% endif %}
 
         {% if user.is_authenticated %}
-            <a href="{% url 'post_edit' pk=post.pk %}"><i class="fas fa-edit fa-2x" style="color: #339af0"></i></a>
+            <a href="{% url 'post_edit' pk=post.pk %}"><i class="fas fa-edit fa-2x" style="color: #ff9400"></i></a>
         {% endif %} 
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }} </p>
